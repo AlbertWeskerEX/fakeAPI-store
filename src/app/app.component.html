@@ -1,3 +1,13 @@
-<h1 class="text-3xl font-bold underline">Sample Text</h1>
-<br>
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" (click)="getData()">Get Data</button>
+<h1 class="flex justify-center fancyText">Fake API Store</h1>
+<br />
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink class="link" routerLink="/products-id">Products ID</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink class="link" routerLink="/products-all">Products All</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+
+<br />

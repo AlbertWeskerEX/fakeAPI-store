@@ -13,10 +13,3 @@
 .maxWidth {
   max-width: 300px;
 }
-
-.fancyText {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-style: italic;
-  font-size: 30px;
-  text-decoration: underline;
-}
