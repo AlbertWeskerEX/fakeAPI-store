@@ -1,8 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IProduct } from '../models/products.model';
-import { product as data } from '../data/product';
-import { ConfigService } from '../config/config.service';
-import { from, Observable } from 'rxjs';
+import { Service } from '../service/service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-products-id',
@@ -10,15 +9,13 @@ import { from, Observable } from 'rxjs';
   styleUrls: ['./products-id.component.css']
 })
 export class ProductsIdComponent {
-    constructor(private _localService: ConfigService) {
+    constructor(private _localService: Service) {
     }
     products$: Observable<IProduct[]>
-  
-    arrayStore:any = [];
+
+    arrayStore:any = [];    
     ngOnInit(): void {
-      this.products$ = this._localService.getData()
-    //   this._localService.getData().subscribe((rez) => {
-    //     this.arrayStore = rez;
-    // })
+      this.products$ = this._localService.getOneProducts()
   }
+
 }

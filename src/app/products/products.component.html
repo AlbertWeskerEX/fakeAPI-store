@@ -1,6 +1,17 @@
-<div class="flexBox">
-  <div *ngFor="let item of products$ | async; index as i">
-    <div class="maxWidth rounded overflow-hidden shadow-lg cardBorder">
+<h1 class="flex justify-center fancy-text">Fake API Store</h1>
+<br />
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink class="link" routerLink="/products/:id">Products ID</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink class="link" routerLink="/products">Products All</a>
+  </li>
+</ul>
+<br />
+<div class="flex-box">
+  <div *ngFor="let item of products$ | async">
+    <div class="max-width rounded overflow-hidden shadow-lg card-border">
       <img
         class="w-full"
         src="{{ this.item.image }}"

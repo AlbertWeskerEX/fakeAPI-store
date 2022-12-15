@@ -1,0 +1,22 @@
+.card-border {
+  border: 2px solid black;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+.max-width {
+  max-width: 300px;
+}
+
+.fancy-text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  text-decoration: underline;
+}
